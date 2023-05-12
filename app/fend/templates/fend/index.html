@@ -1,0 +1,19 @@
+{% extends 'fend/base.html' %}
+
+{% block content %}
+<div class="row" id="book-list">
+  {% for book in books %}
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+      <div class="card h-100">
+        <img src="{{ book.imageLink }}" class="card-img-top" alt="{{ book.title }}">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">{{ book.title }}</h5>
+          <p class="card-text"><b>Author:</b> {{ book.author }}</p>
+          <p class="card-text"><b>Pages:</b> {{ book.pages }}</p>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}
